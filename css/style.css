@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --LightRed: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --OffWhite: hsl(0, 0%, 94%);
+    --LightGrey: hsl(0, 0%, 86%);
+    --SmokeyGrey: hsl(0, 1%, 44%);
+    --OffBlack: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--OffWhite);
+}
+
+.card {
+    width: 45rem;
+    background-color: var(--White);
+    border-radius: 1rem 1rem 10rem 1rem;
+}
+
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer {
+    display: flex;
+    gap: 2rem;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.block label {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    color: var(--SmokeyGrey);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input {
+    width: 8rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--LightGrey);
+    caret-color: var(--Purple);
+    outline: none;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 1px solid var(--Purple);
+}
+
+.submitBlock {
+    display: flex;
+    align-items: center;
+}
+
+.submitBlock hr {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--LightGrey);
+}
+
+.submitBlock .submitBtn {
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: var(--Purple);
+    border: none;
+    cursor: pointer;
+}
+
+.submitBlock .submitBtn:active {
+    background-color: var(--OffBlack);
+}
+
+.outputContainer h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    font-style: italic;
+    height: fit-content;
+}
+
+.outputContainer span {
+    color: var(--Purple);
+}
+
+small {
+    color: var(--LightRed);
+    font-style: italic;
+}
+
+@media screen and (max-width:600px) {
+    .card {
+        width: 25rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .formContainer {
+        margin-bottom: 5rem;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    input {
+        width: 7rem;
+    }
+
+    .submitBlock {
+        position: relative;
+    }
+
+    .submitBlock .submitBtn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .outputContainer {
+        margin-top: 5rem;
+    }
+
+    .outputContainer h1 {
+        font-size: 3.5rem;
+    }
+}
